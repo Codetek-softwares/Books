@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Display</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+header{
+            background-color: rgb(255, 115, 0);
+            color: white;
+            display: flex;
+            border-radius: 5px;
+        }
+        ul{
+            margin-top: 80px;
+            margin-right: 100px;
+            font-size: 20px;
+            color: white;
+            display: flex;
+            text-align: center;
+            gap: 150px;
+            list-style-type: none;
+        }
+        .main-footer{
+    background-color: rgb(255, 115, 0);
+    margin-top: 200px;
+    border-radius: 5px;
+}
+
+.bookfooter {
+    text-align: right;
+    margin-left: 50px;
+    margin-top: 0px;
+    display: flex;
+    gap: 100px;
+    color: black;
+}
+
+.sub-footer{
+    padding: 10PX;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1PX;
+    border-top: 0px solid black;
+    margin-right: -100px;
+}
+.sub-footer p{
+    font-size: 20px;
+    margin-left: 600px;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    color: var(--extra-light);
+    margin-right: 10px;
+}
+.contactus{
+    margin-top: 40px;
+    margin-right: 20px;
+    padding-right: 200px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.Terms-condition{
+    font-size: 20px;
+    color: #fff;
+
+}
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 500px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.book {
+    position: relative;
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popup {
+    position: absolute;
+    top: calc(100% + 10px); 
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+    z-index: 1; 
+    visibility: hidden; 
+}
+
+input[type="checkbox"] {
+    display: none; 
+}
+
+input[type="checkbox"]:checked ~ .popup {
+    opacity: 1;
+    pointer-events: auto; 
+    visibility: visible; 
+    animation: popupFadeOut 30s forwards; 
+}
+
+.popup p {
+    margin: 5px 0;
+}
+
+@keyframes popupFadeOut {
+    0% { opacity: 1; }
+    99% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <img src="./InShot_20240627_111750239.jpg" width="100px" height="100px">
+        <br>
+        <h1>Codetek Books</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" style="color: white;">HOME</a></li>
+                <li><a href="aboutbooks.html" style="color: white;">ABOUT</a></li>
+                <li><a href="bookspage.html" style="color: white;">TYPES</a></li>
+                <li><a href="contactforml.html" style="color: white;">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="book">
+            <input type="checkbox" id="book1">
+            <label for="book1">
+                <img src="./fanta1.jpg" alt="Book 1">
+                <h3>Book Title: MISTBORN </h3>
+                
+            </label>
+            <div class="popup">
+                <p>Author: Brandon Sanderson</p>
+                <p><strong>Price:</strong>1299</p>
+                <p><strong>Plot:</strong> Brandon Sanderson's "Mistborn" series comes first. Here, magic is as real as breathing, as natural as gravity. It's not just hocus pocus, but an ironclad system of rules - a terrifyingly logical mechanism driven by the consumption of metals. Mistborns gulp down vials of metal shavings and then "burn" them and so on.</p>
+                </p>
+            </div>
+        </div>
+        <div class="book">
+            <input type="checkbox" id="book2">
+            <label for="book2">
+                <img src="./fany2.jpg" alt="Book 2">
+                <h3>Book Title: THE INHERITANCE GAMES </h3>
+                
+            </label>
+            <div class="popup">
+                <p>Author: Jennifer Lynn Barnes</p>
+                <p><strong>Price:</strong> 499</p>
+                <p><strong>Plot:</strong>The book follows Avery Kylie Grambs, a high school girl who lost her mom and is now living with her step-sister Libby. Avery has just discovered that Tobias Hawthorne, a billionaire, has left her in his will. However, Avery will not simply inherit the fortune.</p>
+            </div>
+        </div>
+        <div class="book">
+            <input type="checkbox" id="book3">
+            <label for="book3">
+                <img src="./Fanta3.jpd.jpg" alt="Book 3">
+                <h3>Book Title: THE SUNLIT MAN</h3>
+            </label>
+            <div class="popup">
+                <p><strong>Price:</strong> 2499</p>
+                <p>Author:Brandon Sanderson</p>
+                <p><strong>Plot:</strong> Forced to hop from world to world in the Cosmere whenever the relentless Night Brigade gets too close, Nomad lands on a new planet and is instantly caught up in the struggle between a tyrant and the rebels who want only to escape being turned into mindless slaves</p>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="bookfooter" >
+          <div class="footer" >
+              <h3>Companies</h3>
+              <p style="text-align: left;"><a href="https://www.simonandschuster.com/"style="color: rgb(236, 233, 233);">Simon & Schuster</a></p>
+              <p style="text-align: left;"><a href="https://www.hachette.com/" style="color: rgb(236, 233, 233);">Hachette Livre</a></p>
+              <p style="text-align: left;"><a href="https://macmillan.com/" style="color: rgb(236, 233, 233);">Macmillan Publishers</a></p>
+          </div>
+        <div class="Terms-condition">
+          <h3>Terms & condition</h3>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Cancel Order </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Refund </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Damage Book Policy</a></p>
+        </div>
+        <div class="contactus">
+          <p>Codetekbooks@codetek.com</p>
+          <p>phone No:8639808555</p>
+         <i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/BXw9LPxa9wAZMbFp6" style="color: rgb(236, 233, 233);"> Hyderabed</a>
+        </div>
+      </div>
+      </footer>
+      <footer class="footer-down">
+      <div class="sub-footer">
+          <p>Copyright @ 2024 Codetek Books. All Rights Ewserved</p>
+          <div class="social-media">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-linkedin"></i>
+          </div>
+          </div>
+     </footer>
+    </body>
+    </html>

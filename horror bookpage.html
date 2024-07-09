@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Display</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+header{
+            background-color: rgb(255, 115, 0);
+            color: white;
+            display: flex;
+            border-radius: 5px;
+        }
+        ul{
+            margin-top: 80px;
+            margin-right: 100px;
+            font-size: 20px;
+            color: white;
+            display: flex;
+            text-align: center;
+            gap: 150px;
+            list-style-type: none;
+        }
+        .main-footer{
+    background-color: rgb(255, 115, 0);
+    margin-top: 200px;
+    border-radius: 5px;
+}
+
+.bookfooter {
+    text-align: right;
+    margin-left: 50px;
+    margin-top: 0px;
+    display: flex;
+    gap: 100px;
+    color: black;
+}
+
+.sub-footer{
+    padding: 10PX;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 1PX;
+    border-top: 0px solid black;
+    margin-right: -100px;
+}
+.sub-footer p{
+    font-size: 20px;
+    margin-left: 600px;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    color: var(--extra-light);
+    margin-right: 10px;
+}
+.contactus{
+    margin-top: 40px;
+    margin-right: 20px;
+    padding-right: 200px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.Terms-condition{
+    font-size: 20px;
+    color: #fff;
+
+}
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 500px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.book {
+    position: relative;
+    width: 30%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; 
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popup {
+    position: absolute;
+    top: calc(100% + 10px); 
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+    z-index: 1; 
+    visibility: hidden; 
+}
+
+input[type="checkbox"] {
+    display: none; 
+}
+
+input[type="checkbox"]:checked ~ .popup {
+    opacity: 1;
+    pointer-events: auto; 
+    visibility: visible; 
+    animation: popupFadeOut 30s forwards; 
+}
+
+.popup p {
+    margin: 5px 0;
+}
+
+@keyframes popupFadeOut {
+    0% { opacity: 1; }
+    99% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <img src="./InShot_20240627_111750239.jpg" width="100px" height="100px">
+        <br>
+        <h1>Codetek Books</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html" style="color: white;">HOME</a></li>
+                <li><a href="aboutbooks.html" style="color: white;">ABOUT</a></li>
+                <li><a href="bookspage.html" style="color: white;">TYPES</a></li>
+                <li><a href="contactforml.html" style="color: white;">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="book">
+            <input type="checkbox" id="book1">
+            <label for="book1">
+                <img src="./horror3.jpg" alt="Book 1">
+                <h3>Book Title: GHOUSTS OF THE SILENT HILLS</h3>
+                
+            </label>
+            <div class="popup">
+                <p>Author: BRAVIES LUTHOR</p>
+                <p><strong>Price:</strong>799</p>
+                <p><strong>Plot:</strong> The peculiar story of the ghost, a soul that dies dissatisfied,  and reflects the flaws in our society and humanity.  The eerie silence, the misty air, the screeches snd screams, the blood, and horror – it truly was an amazing ride for someone who hasn’t experiment a lot with the horror fiction.
+
+                </p>
+            </div>
+        </div>
+        <div class="book">
+            <input type="checkbox" id="book2">
+            <label for="book2">
+                <img src="./horror2.jpg" alt="Book 2">
+                <h3>Book Title: THE CANTERVILLE GHOST</h3>
+                
+            </label>
+            <div class="popup">
+                <p>Author: DAVID PAUL</p>
+                <p><strong>Price:</strong> 499</p>
+                <p><strong>Plot:</strong> Hiram Otis comes to England with his wife, daughter and two sons on a research grant; he and his family will live in a castle called Canterville Hall. The Castle is haunted by the ghost of a deceased ancestor, Sir Simon de Canterville, doomed to remain on the estate after the death of his wife. </p>
+            </div>
+        </div>
+        <div class="book">
+            <input type="checkbox" id="book3">
+            <label for="book3">
+                <img src="./horror4.jpg" alt="Book 3">
+                <h3>Book Title: GHOSTS IN THE SILENCE</h3>
+            </label>
+            <div class="popup">
+                <p><strong>Price:</strong> 2499</p>
+                <p>Author: HILES WILSON</p>
+                <p><strong>Plot:</strong> The beautiful dream-house of a newly-wed couple slowly turns into their worst nightmare, malevolent spirits prance around to prey on the living, naïve youngsters are lured into the world of tantriks and black magic, and even simple games turn out to be dangerous and life-threatening.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="bookfooter" >
+          <div class="footer" >
+              <h3>Companies</h3>
+              <p style="text-align: left;"><a href="https://www.simonandschuster.com/"style="color: rgb(236, 233, 233);">Simon & Schuster</a></p>
+              <p style="text-align: left;"><a href="https://www.hachette.com/" style="color: rgb(236, 233, 233);">Hachette Livre</a></p>
+              <p style="text-align: left;"><a href="https://macmillan.com/" style="color: rgb(236, 233, 233);">Macmillan Publishers</a></p>
+          </div>
+        <div class="Terms-condition">
+          <h3>Terms & condition</h3>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Cancel Order </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Refund </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Damage Book Policy</a></p>
+        </div>
+        <div class="contactus">
+          <p>Codetekbooks@codetek.com</p>
+          <p>phone No:8639808555</p>
+         <i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/BXw9LPxa9wAZMbFp6" style="color: rgb(236, 233, 233);"> Hyderabed</a>
+        </div>
+      </div>
+      </footer>
+      <footer class="footer-down">
+      <div class="sub-footer">
+          <p>Copyright @ 2024 Codetek Books. All Rights Ewserved</p>
+          <div class="social-media">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-linkedin"></i>
+          </div>
+          </div>
+     </footer>
+    </body>
+    </html>

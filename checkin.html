@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight PNR Status and Booking Reference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="checkin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Check Flight PNR Status</h1>
+        <form action="check-pnr" method="post">
+            <label for="departing">Departing:</label>
+            <input type="text" id="departing" name="departing" required>
+
+            <label for="arriving">Arriving:</label>
+            <input type="text" id="arriving" name="arriving" required>
+             
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="pnr">PNR Number:</label>
+            <input type="text" id="pnr" name="pnr" required>
+
+            <label for="booking-ref">Booking Reference:</label>
+            <input type="text" id="booking-ref" name="booking-ref" required>
+            <button type="submit">Check Status</button>
+        </form>
+    </div>
+    <footer class="main-footer">
+        <div class="airlines" >
+          <div class="footer" >
+              <h3>Companies</h3>
+              <p style="text-align: left;"><a href="https://www.goindigo.in/?cid=Display%7CAffiliate%7CLF%7CLA11%7C%7B214%7D&gad_source=1&gclid=CjwKCAjw1emzBhB8EiwAHwZZxTfgDWJ_R5q_z656S-cYkHlzKDN8SDqg6qsLQK2ydMjbUd5uE7mi2hoC9l8QAvD_BwE" style="color: rgb(236, 233, 233);"> INDIGO</a></p>
+              <p style="text-align: left;"><a href="https://www.airpaz.com/en/airlines/AK-AirAsia?a=21351117555&b=163204602237&d=c&gad_source=1&gclid=CjwKCAjw1emzBhB8EiwAHwZZxRtPQz8aTTJrYLY2kEzPWl7_YW95GvLuTBSZ_pIWp0SA_bYHgy_CYhoCDfIQAvD_BwE&l=9062141&n=g&p=&t=dsa-1465706623091&utm_medium=cpc&utm_source=gads" style="color: rgb(236, 233, 233);"> AIR ASIA</a></p>
+              <p style="text-align: left;"><a href="https://www.emirates.com/in/english/book/?gad_source=1&gclid=CjwKCAjw1emzBhB8EiwAHwZZxWMbXTtiWBtQqEoDUUfZUiX2UMs57UrI6wAwUSnChJQ2lRoEQIyrRxoC2zIQAvD_BwE&gclsrc=aw.ds" style="color: rgb(236, 233, 233);"> EMIRATES</a></p>
+          </div>
+        <div class="Terms-condition">
+          <h3>Terms & condition</h3>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Cancellation </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Refund </a></p>
+          <p style="text-align: left;"><a href="#" style="color: rgb(236, 233, 233);">Baggage Policy</a></p>
+        </div>
+        <div class="contactus">
+          <p>Codetekariway@codetek.com</p>
+          <p>phone No:9700943645</p>
+         <i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/BXw9LPxa9wAZMbFp6" style="color: rgb(236, 233, 233);"> Hyderabed</a>
+        </div>
+      </div>
+      </footer>
+      <footer class="footer-down">
+      <div class="sub-footer">
+          <p>Copyright @ 2024 Codetek Airways. All Rights Ewserved</p>
+          <div class="social-media">
+              <i class="bi bi-facebook"></i>
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-linkedin"></i>
+          </div>
+          </div>
+     </footer>
+</body>
+</html>
